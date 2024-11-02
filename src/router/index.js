@@ -6,17 +6,23 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../components/TheContador.vue'),
+      component: () => import('../modules/contador/components/TheContador.vue'),
     },
     {
       path: '/contador',
       name: 'contador',
-      component: () => import('../components/TheContador.vue'),
+      component: () => import('../modules/contador/components/TheContador.vue'),
     },
     {
       path: '/lista-de-tareas',
       name: 'ListaTareas',
-      component: () => import('../components/ListaTareas.vue'),
+      component: () =>
+        import('../modules/listaDeTareas/components/ListaTareas.vue'),
+    },
+    {
+      path: '/registrar',
+      name: 'Registrar',
+      component: () => import('../modules/registro/views/RegistrarView.vue'),
     },
   ],
 })
